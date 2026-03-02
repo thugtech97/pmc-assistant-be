@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('knowledge', function (Blueprint $table) {
             $table->id();
+            $table->string('type'); // camm, hris, dims, etc
+            $table->text('content'); // chunked text
+            $table->text('embedding')->nullable(); // optional future vector
             $table->timestamps();
+
+            $table->index('type');
         });
     }
 
