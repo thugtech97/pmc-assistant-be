@@ -62,7 +62,9 @@ class ChatController extends Controller
         - Always answer clearly.
         - If procedural, use ordered steps.
         - Return valid HTML inside a single <div>.
-        - Use <p>, <ol>, <ul>, <li>, <strong>.
+        - Use <p>, <ol>, <ul>, <li>, <strong>, <img>.
+        - If the knowledge contains images relevant to the answer, include them using <img src='...'>.
+        - Images must be placed on their own line inside the response.
         - No markdown.
 
         KNOWLEDGE:
