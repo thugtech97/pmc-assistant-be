@@ -74,4 +74,15 @@ class ChatController extends Controller
         {$question}
         ";
     }
+
+    public function index(Request $request)
+    {
+        $type = $request->query('type');
+ 
+        $knowledge = Knowledge::where('type', $type)->first();
+ 
+        return response()->json([
+            'faqs' => $knowledge?->faqs ?? [],
+        ]);
+    }
 }

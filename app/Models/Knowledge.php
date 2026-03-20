@@ -12,6 +12,11 @@ class Knowledge extends Model
     protected $fillable = [
         'type',
         'content',
-        'embedding'
+        'faqs',
+        'embedding',
+    ];
+
+    protected $casts = [
+        'faqs' => 'array',
     ];
 }
